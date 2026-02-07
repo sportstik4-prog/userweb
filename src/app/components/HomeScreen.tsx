@@ -228,7 +228,7 @@ interface HomeScreenProps {
 }
 
 export function HomeScreen({ onNavigate, onJoinGame }: HomeScreenProps) {
-  const [location, setLocation] = useState('Koramangala, Bangalore');
+  const [location, setLocation] = useState('Hadapsar, Pune');
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleMerchandiseClick = (productId: string) => {
@@ -241,17 +241,17 @@ export function HomeScreen({ onNavigate, onJoinGame }: HomeScreenProps) {
       <div className="bg-white border-b sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between mb-4">
-            <img 
-              src="figma:asset/8ae1b7e9fc5eb182fbb472b0451115094fd063df.png" 
-              alt="Sportstik" 
-              className="h-8"
+            <img
+              src="\src\app\assets\images\logos\logo1.png"
+              alt="Sportstik"
+              className="h-10"              
             />
             <div className="flex items-center gap-3">
               <button className="p-2 hover:bg-gray-100 rounded-full relative">
                 <Bell className="size-6 text-gray-700" />
                 <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
               </button>
-              <button 
+              <button
                 onClick={() => onNavigate('profile')}
                 className="p-2 hover:bg-gray-100 rounded-full"
               >
@@ -320,7 +320,7 @@ export function HomeScreen({ onNavigate, onJoinGame }: HomeScreenProps) {
         <div>
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl">Featured Venues</h2>
-            <button 
+            <button
               onClick={() => onNavigate('venues')}
               className="text-blue-600 text-sm hover:underline"
             >
@@ -384,7 +384,7 @@ export function HomeScreen({ onNavigate, onJoinGame }: HomeScreenProps) {
         <div>
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl">Upcoming Games Near You</h2>
-            <button 
+            <button
               onClick={() => onNavigate('upcoming-games')}
               className="text-blue-600 text-sm hover:underline"
             >
@@ -424,7 +424,7 @@ export function HomeScreen({ onNavigate, onJoinGame }: HomeScreenProps) {
                     <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">
                       {game.skillLevel}
                     </span>
-                    <button 
+                    <button
                       onClick={(e) => {
                         e.stopPropagation();
                         onJoinGame(game.id);
